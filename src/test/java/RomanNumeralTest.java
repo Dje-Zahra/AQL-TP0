@@ -16,5 +16,6 @@ class RomanNumeralTest {
 
         //Assert
         assertAll(() ->assertEquals(1,result),
-                () -> assertEquals(8,result2));    }
+                () -> assertEquals(8,result2));
+    }
 }

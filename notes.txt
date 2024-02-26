@@ -1,0 +1,30 @@
+cntrl+shift+O ==>sync
+
+alt+enter 
+
+@DisplayName annotation specifies a more convenient and informative name for the test.
+
+
+**************************
+One test :
+ assertEquals(4, Calculator.add(2, 2));
+// here verify if our class is gonna take inputs : 2 , 2 (or more) and return the desired result 4.
+**
+when true  :: return 0
+when false :: return -1
+
+
+*************************
+ to add multiple assertions in a single test ; ensures all of them are checked.
+assertAll(() -> assertEquals(4, Calculator.multiply(2, 2)),
+    () -> assertEquals(-4, Calculator.multiply(2, -2)),
+    () -> assertEquals(4, Calculator.multiply(-2, -2)),
+    () -> assertEquals(0, Calculator.multiply(1, 0)));
+
+****************************
+Un test unitaire est une méthode qui vérifie le comportement d’une unité de code
+*******************************
+ AAA (Arrange, Act, Assert)
+
+*****
+using     @beforeEach    // faire avant tt test !!
