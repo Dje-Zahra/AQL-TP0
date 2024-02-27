@@ -45,8 +45,12 @@ public class StackModified {
 
 
 
-    public void display(){
-        System.out.println(array);
+    public int[] myArray(){
+        return this.array;
+    }
+
+    public int myTop(){
+        return this.top;
     }
 
 

@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,8 +36,20 @@ class StackTest {
     // size,
 
     @Test
-    void check(){
+    void checkPush(){
+        Assertions.assertEquals(-1,s.myTop());
+        s.push(5);
+        Assertions.assertAll(()-> assertEquals(5,s.myArray()[0])
+        );
+    }
 
+    @Test
+    void checkSizeAfterPush(){
+        Assertions.assertEquals(-1,s.myTop());
+        s.push(5);
+        Assertions.assertAll(()-> assertEquals(5,s.myArray()[0]),
+                ()-> assertEquals(5,s.myArray()[])
+        );
     }
 
 }
